@@ -11,8 +11,8 @@ Expectation Maximization.
 #Training models
 Train conditional probabilities on a set of AMR files
 Output
-* <model name>.em
-* <model name>.hmm
+* \<model name\>.em
+* \<model name\>.hmm
 ```
 python train.py -f <AMR file paths> -em <number of iterations> -hmm <number of iterations> -model <model name>
 ```
