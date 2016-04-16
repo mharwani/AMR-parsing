@@ -6,7 +6,7 @@ Created on Fri Apr  8 01:54:23 2016
 """
 
 #Expectation-Maximization
-#Generating transaltional lexicon probabilities with EM
+#Conditional probabilities
 import pickle
 from .Objects import AMRNode
 
