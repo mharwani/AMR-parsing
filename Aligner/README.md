@@ -26,9 +26,9 @@ python align.py <AMR file path> <output file name> -model <model name>
 #Train and Align
 Train and align a set of AMR files
 Output
-* <model name>.em
-* <model name>.hmm
-* <AMR files>.alignment
+* \<model name\>.em
+* \<model name\>.hmm
+* \<AMR files\>.alignment
 ```
 python train_align.py -f <AMR file paths> -em <number of iterations> -hmm <number of iterations>
 ```
