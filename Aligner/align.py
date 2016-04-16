@@ -7,7 +7,7 @@ Created on Wed Apr 13 17:54:23 2016
 
 #Align AMR file using model.em and model.hmm
 
-#USAGE: align.py AMR_input_file output_file -em em_model -hmm hmm_model
+#USAGE: align.py AMR_input_file output_file -model model_name
 
 from aligner import Aligner, EM, HMM
 import sys
@@ -29,27 +29,23 @@ if __name__ == "__main__":
         fin = open(sys.argv[1], "r")
         fout = open(sys.argv[2], "w")
     except IndexError:
-        System.exit("USAGE: align.py <AMR input file> <output file> -em <EM model file> -hmm <HMM model file>")
-    em_name = "model.em"
-    hmm_name = "model.hmm"
+        System.exit("USAGE: align.py <AMR input file> <output file> -model <model name>")
+    model_name = "model"
 
     args = sys.argv[3:]
     i = 0
     n = len(args)
     while i < n:
-        if args[i] == "-em":
-            em_name = args[i+1]
-            i += 2
-        elif args[i] == "-hmm":
-            hmm_name = args[i+1]
+        if args[i] == "-model":
+            model_name = args[i+1]
             i += 2
         else:
             print("Invalid argument: " + args[i])
-            System.exit("USAGE: align.py <AMR input file> <output file> -em <EM model file> -hmm <HMM model file>")
+            System.exit("USAGE: align.py <AMR input file> <output file> -model <model name>")
 
     #load models
-    em = EM.load_model(em_name)
-    hmm = HMM.load_model(hmm_name)
+    em = EM.load_model(model_name + ".em")
+    hmm = HMM.load_model(model_name + ".hmm")
     
     align_file(fin, fout, em, hmm)
     fin.close()
