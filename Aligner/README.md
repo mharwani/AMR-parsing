@@ -9,7 +9,8 @@ Expectation Maximization.
 * NLTK and Wordnet
 
 #Training models
-Train conditional probabilities on a set of AMR files
+Train conditional probabilities on a set of AMR files.
+
 Output
 * \<model name\>.em
 * \<model name\>.hmm
@@ -17,14 +18,16 @@ Output
 python train.py -f <AMR file paths> -em <number of iterations> -hmm <number of iterations> -model <model name>
 ```
 #Aligning AMR file
-Align a single AMR file using a trained model
+Align a single AMR file using a trained model.
+
 Output
 * Alignment file
 ```
 python align.py <AMR file path> <output file name> -model <model name>
 ```
 #Train and Align
-Train and align a set of AMR files
+Train and align a set of AMR files.
+
 Output
 * \<model name\>.em
 * \<model name\>.hmm
