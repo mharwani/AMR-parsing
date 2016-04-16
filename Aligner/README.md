@@ -6,7 +6,7 @@ Expectation Maximization.
 #Requires
 
 * Python 3
-* NLTK and Wordnet
+* NLTK and with Wordnet corpus
 
 #Training models
 Train conditional probabilities on a set of AMR files.
